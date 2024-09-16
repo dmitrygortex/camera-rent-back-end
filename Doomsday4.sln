@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doomsday4.Api", "Doomsday4.Api\Doomsday4.Api.csproj", "{B1F125C4-7ABB-471C-94F7-9C4E5ED5E24D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doomsday4.Application", "Doomsday4.Application\Doomsday4.Application.csproj", "{A584E700-5B8C-45C7-8AAC-423C2CDAA9DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F125C4-7ABB-471C-94F7-9C4E5ED5E24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F125C4-7ABB-471C-94F7-9C4E5ED5E24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F125C4-7ABB-471C-94F7-9C4E5ED5E24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F125C4-7ABB-471C-94F7-9C4E5ED5E24D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A584E700-5B8C-45C7-8AAC-423C2CDAA9DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A584E700-5B8C-45C7-8AAC-423C2CDAA9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A584E700-5B8C-45C7-8AAC-423C2CDAA9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A584E700-5B8C-45C7-8AAC-423C2CDAA9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
