@@ -2,7 +2,7 @@
 using System.Net;
 using FluentValidation;
 
-namespace Example.Project.Api.Middlewares;
+namespace Doomsday4.Api.Middlewares;
 
 public record ErrorDto(string Error);
 

@@ -1,6 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 
-namespace Doomsday4.Api.Swagger;
+namespace doomsday4.Swagger;
 
 public static class SetupSwaggerConfiguration
 {
@@ -16,7 +16,7 @@ public static class SetupSwaggerConfiguration
                     new OpenApiInfo
                     {
                         Version = "v1",
-                        Title = "Название проекта",
+                        Title = "Doomsday",
                         Description = "by Биба и Боба"
                     }
                 );

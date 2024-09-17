@@ -10,10 +10,8 @@
 
 using Doomsday4.Api.Endpoints;
 using Doomsday4.Api.Middlewares;
-using Doomsday4.Api.Swagger;
 using Doomsday4.Application;
-using Doomsday4.Endpoints;
-using Example.Project.Api.Middlewares;
+using doomsday4.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 

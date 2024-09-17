@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Example.Project.Common.Domain;
+namespace Doomsday4.Common.Domain;
 
 public abstract class Entity<T>
 {

@@ -1,12 +1,11 @@
 ﻿using Doomsday4.Application.PipelineBehaviors;
 using Doomsday4.Domain.Data;
-using Example.Project.Application.PipelineBehaviors;
-using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using FluentValidation;
 
-namespace Example.Project.Application;
+namespace Doomsday4.Application;
 
 public static class IoC
 {

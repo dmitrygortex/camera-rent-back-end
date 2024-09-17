@@ -1,4 +1,4 @@
-﻿namespace Example.Project.Common.EF;
+﻿namespace Doomsday4.Common.EF;
 
 public interface IEventPublisher : IDisposable
 {

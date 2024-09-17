@@ -1,4 +1,4 @@
-﻿namespace Doomsday4.Endpoints;
+﻿namespace Doomsday4.Api.Endpoints;
 
 public static class SystemEndpoints
 {
