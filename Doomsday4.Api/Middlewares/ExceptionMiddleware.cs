@@ -1,10 +1,7 @@
-﻿
-using System.Net;
+﻿using System.Net;
 using FluentValidation;
 
 namespace Doomsday4.Api.Middlewares;
-
-public record ErrorDto(string Error);
 
 public class ExceptionMiddleware
 {

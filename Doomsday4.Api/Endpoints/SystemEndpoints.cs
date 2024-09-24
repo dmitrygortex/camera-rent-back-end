@@ -7,7 +7,7 @@ public static class SystemEndpoints
         var endpoints = app.MapGroup("/system");
 
         endpoints.MapGet("/are-you-okay", () =>
-            Task.FromResult(Results.Ok("I'm okay!)")));
+            Results.Ok("Test"));
         return app;
     }
 }
