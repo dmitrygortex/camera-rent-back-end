@@ -19,11 +19,11 @@ public class User : Entity<Guid>
         UserRole = userRole;
     }
 
-    public string PhoneNumber { get; }
-    public string Password { get; }
-    public string Email { get; }
-    public string LastName { get; }
-    public string FirstName { get; }
-    public List<Order> Orders { get; } = new List<Order>();
-    public UserRole UserRole { get; }
+    public string PhoneNumber { get; private set;}
+    public string Password { get; private set;}
+    public string Email { get; private set;}
+    public string LastName { get; private set;}
+    public string FirstName { get; private set;}
+    // public List<Order> Orders { get; private set;} = new List<Order>();
+    public UserRole UserRole { get; private set;}
 }

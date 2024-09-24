@@ -12,7 +12,7 @@ public static class IoC
         // Сюда передаём DbContext и имя подключения с файла в .Api - appsettings.json
         services.AddDbContext<RentDbContext>(
             options => options.UseNpgsql(
-                configuration.GetConnectionString("name_connections")
+                configuration.GetConnectionString("DBConnection")
             )
         );
         return services;

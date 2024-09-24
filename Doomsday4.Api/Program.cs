@@ -43,5 +43,6 @@ app.UseCors(policy => policy
 
 //Endpoints
 app.AddSystemEndpoints();
+app.AddUserEndpoints();
 
 app.Run();

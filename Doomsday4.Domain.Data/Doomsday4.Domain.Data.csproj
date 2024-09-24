@@ -29,4 +29,8 @@
       <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>
