@@ -28,6 +28,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Doomsday4.Application\Doomsday4.Application.csproj"/>
+        <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Domain.csproj" />
     </ItemGroup>
 
 

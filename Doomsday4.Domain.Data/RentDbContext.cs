@@ -31,12 +31,13 @@ namespace Doomsday4.Domain.Data;
 public class RentDbContext : DbContext
 {
     public DbSet<User> Users { get; set; }
+    public DbSet<Order> Orders { get; set; }
     public RentDbContext()
     {
         Database.EnsureCreated();
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5435;Database=camerarentdb;Username=postgres;Password=0");
+        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=camerarentdb;Username=postgres;Password=lansepup1");
     }
 }

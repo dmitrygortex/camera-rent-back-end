@@ -24,5 +24,6 @@ public class User : Entity<Guid>
     public string Email { get; }
     public string LastName { get; }
     public string FirstName { get; }
+    public List<Order> Orders { get; } = new List<Order>();
     public UserRole UserRole { get; }
 }

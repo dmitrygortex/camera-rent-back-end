@@ -9,5 +9,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     {
         builder.HasKey(u => u.Id);
         builder.Property(u => u.UserRole).HasConversion<string>();
+        builder.HasMany(u => u.Orders).WithOne(u => u.User).HasForeignKey(o => o.UserId);
     }
 }

@@ -27,6 +27,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Doomsday4.Domain.Data\Doomsday4.Domain.Data.csproj" />
+      <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Order\CommandHandlers\" />
+      <Folder Include="Order\Command\" />
     </ItemGroup>
 
 </Project>
