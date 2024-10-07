@@ -4,7 +4,7 @@ namespace Doomsday4.Domain;
 
 public class Order : Entity<Guid>
 {
-    public Order()
+    private Order()
     {
     }
 

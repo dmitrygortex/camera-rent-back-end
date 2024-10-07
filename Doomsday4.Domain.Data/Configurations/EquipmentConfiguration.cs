@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Doomsday4.Domain.Data.Configurations;
 
-public class OrderConfiguration : IEntityTypeConfiguration<Order>
+public class EquipmentConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> builder)
     {
