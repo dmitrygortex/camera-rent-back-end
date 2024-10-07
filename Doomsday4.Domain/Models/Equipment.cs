@@ -4,11 +4,11 @@ namespace Doomsday4.Domain;
 
 public class Equipment : Entity<Guid>
 {
-    public Equipment()
+    private Equipment()
     {
     }
 
-    public Equipment(string name, string description, double price, EquipmentCategory category, EquipmentSubCategory subCategory, EquipmentStatus status)
+    public Equipment(string name, string description, double price, EquipmentCategory category, EquipmentStatus status)
     {
         Id = Guid.NewGuid();
         Name = name;
@@ -16,16 +16,13 @@ public class Equipment : Entity<Guid>
         Price = price;
         Category = category;
         Status = status;
-        SubCategory = subCategory;
     }
     
-    public string Name { get; private set; }
-    public string Description { get; private set; }
-    public double Price { get; private set; }
+    // Нормально ли что не приватные сетеры
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public double Price { get; set; }
     public EquipmentCategory Category { get; private set; }
-    public EquipmentSubCategory SubCategory { get; private set; }
-
-    public EquipmentStatus Status { get; private set; }
-    
+    public EquipmentStatus Status { get; set; }
 
 }

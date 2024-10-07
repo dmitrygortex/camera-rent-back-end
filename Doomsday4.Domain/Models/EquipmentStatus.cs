@@ -1,5 +1,15 @@
 namespace Doomsday4.Domain;
 
+/// <summary>
+/// Статус оборудования: 
+/// 0 - доступно 
+/// 1 - забронированно 
+/// 2 - арендовано 
+/// 3 - в ремонте 
+/// 4 - недоступно 
+/// 5 - в доставке
+/// 6 - выведено из эксплуатации
+/// </summary>
 public enum EquipmentStatus
 {
     //доступно
@@ -7,13 +17,13 @@ public enum EquipmentStatus
     // забронированно
     Reserved = 1,
     // арендовано
-    RentedOut = 3,
+    RentedOut = 2,
     // в ремонте
-    OnMaintenance = 4,
+    OnMaintenance = 3,
     // недоступно
-    Unavailable = 5,
+    Unavailable = 4,
     // в доставке
-    InDelivery = 6,
+    InDelivery = 5,
     // выведено из эксплуатации
-    Decommissioned = 7
+    Decommissioned = 6
 }

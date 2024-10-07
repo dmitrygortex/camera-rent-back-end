@@ -1,12 +1,17 @@
 namespace Doomsday4.Domain;
 
-public enum EquipmentCategory
+public class EquipmentCategory
 {
-    Cameras = 1,
-    Optics = 2,
-    Lighting = 3,
-    OperatorEquipment = 4,
-    ReadySetUps = 5,
-    ShootingAccessories = 6,
-    ExternalDevice = 7
+    private Guid CategoryId { get; set; }
+    private Guid? ParentCategoryId { get; set; }
+    private string Name { get; set; }
+    public Dictionary<string, object> Parameters { get; set; }
+    
+    // Cameras
+    // Optics
+    // Lighting
+    // OperatorEquipment
+    // ReadySetUps
+    // ShootingAccessories
+    // ExternalDevice
 }
