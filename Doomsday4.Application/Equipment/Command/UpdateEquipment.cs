@@ -14,10 +14,10 @@ public class UpdateEquipment: IRequest<Guid>
         Status = status;
     }
     
-    public Guid LastEquipmentGuid { get; set; }
-    public string Name { get; set; }
-    public string Description { get; set;}
-    public double Price { get; set;}
-    public EquipmentStatus Status { get; set;}
+    public Guid LastEquipmentGuid { get; }
+    public string Name { get;}
+    public string Description { get;}
+    public double Price { get; }
+    public EquipmentStatus Status { get;}
 
 }

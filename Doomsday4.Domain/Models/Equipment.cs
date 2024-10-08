@@ -19,10 +19,29 @@ public class Equipment : Entity<Guid>
     }
     
     // Нормально ли что не приватные сетеры
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public double Price { get; set; }
+    public string Name { get; private set; }
+
+    public void rename(string newName)
+    {
+        this.Name = newName;
+    }
+    public string Description { get; private set; }
+
+    public void changeDescription(string newDescription)
+    {
+        this.Description = newDescription;
+    }
+    public double Price { get; private set; }
+    public void changePrice(double newPrice)
+    {
+        this.Price = newPrice;
+    }
     public EquipmentCategory Category { get; private set; }
-    public EquipmentStatus Status { get; set; }
+    public EquipmentStatus Status { get; private set; }
+    
+    public void changeStatus(EquipmentStatus newStatus)
+    {
+        this.Status = newStatus;
+    }
 
 }
