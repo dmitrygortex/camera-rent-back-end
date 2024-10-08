@@ -10,6 +10,10 @@ public class RentDbContext : DbContext
     public RentDbContext(DbContextOptions<RentDbContext> options) : base(options)
     {
     }
+
+    public RentDbContext()
+    {
+    }
     
     public DbSet<User> Users { get; set; }
     public DbSet<Order> Orders { get; set; }
@@ -33,6 +37,7 @@ public class RentDbContext : DbContext
     
    
 }
+
 // public class RentDbContext : DbContext
 // {
 //     public DbSet<User> Users { get; set; }
