@@ -12,6 +12,7 @@ public class EquipmentConfiguration : IEntityTypeConfiguration<Equipment>
         builder.Property(e => e.Status).HasConversion<string>();
         builder.Property(e => e.Category)
             .HasColumnType("jsonb");
+
         //.HasConversion(v )
         //enum будет сохраняться в стринге
     }

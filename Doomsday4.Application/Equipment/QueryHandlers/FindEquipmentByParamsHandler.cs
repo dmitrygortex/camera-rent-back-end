@@ -1,9 +1,10 @@
 using Doomsday4.Application.Equipment.Models;
+using Doomsday4.Application.Equipment.Query;
 using Doomsday4.Domain.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Doomsday4.Application.Equipment;
+namespace Doomsday4.Application.Equipment.QueryHandlers;
 
 public class FindEquipmentByParamsHandler(RentDbContext context) : IRequestHandler<FindEquipmentByParams, EquipmentInfo>
 {

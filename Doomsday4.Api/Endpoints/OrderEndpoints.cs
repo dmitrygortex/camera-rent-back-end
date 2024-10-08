@@ -4,6 +4,7 @@ using Doomsday4.Application.User.Command;
 using Doomsday4.Domain;
 using Doomsday4.Domain.Models;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Doomsday4.Api.Endpoints;
 
@@ -13,7 +14,7 @@ public static class OrderEndpoints
         {
             var endpoints = app.MapGroup("/order");
     
-            endpoints.MapPost("/add", async (IMediator mediator, Order order) =>
+            endpoints.MapPost("/add", async (IMediator mediator,[FromBody] Order order) =>
             {
                 var result = await mediator.Send(new AddNewOrder(order.UserId, order.StartDateTime, 
                     order.EndDateTime, order.Сost, order.Status));
@@ -27,7 +28,7 @@ public static class OrderEndpoints
                 return Results.Ok(result);
             });
             
-            endpoints.MapGet("/find-by-id/{id}", async (IMediator mediator, FindOrderById order) =>
+            endpoints.MapGet("/find-by-id/{id}", async (IMediator mediator,[FromBody] FindOrderById order) =>
             {
                 var result = await mediator.Send(new FindOrderById(order.Id));
                 

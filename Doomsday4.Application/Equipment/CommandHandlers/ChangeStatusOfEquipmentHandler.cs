@@ -12,10 +12,11 @@ public class ChangeStatusOfEquipmentHandler(RentDbContext context) : IRequestHan
         var equipment = await context.Equipments.FindAsync(new object[] { command.Equipment.Id });
         if (equipment != null)
         {
-            equipment.changeStatus(command.EquipmentStatus);
+            equipment.ChangeStatus(command.EquipmentStatus);
             await context.SaveChangesAsync(cancellationToken);
             return equipment.Id;
         }
+        
         throw new ApplicationException($"Equipment {Guid.Empty} does not exist");
     }
 }

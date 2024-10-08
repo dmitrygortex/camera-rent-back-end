@@ -1,9 +1,8 @@
 using Doomsday4.Application.Equipment.Models;
-using Doomsday4.Domain;
 using Doomsday4.Domain.Models;
 using MediatR;
 
-namespace Doomsday4.Application.Equipment;
+namespace Doomsday4.Application.Equipment.Query;
 
 public class FindEquipmentByParams : IRequest<EquipmentInfo>
 {

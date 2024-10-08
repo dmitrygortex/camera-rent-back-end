@@ -9,10 +9,10 @@ public class UpdateEquipmentHandler(RentDbContext context) : IRequestHandler<Upd
     public async Task<Guid> Handle(UpdateEquipment command, CancellationToken cancellationToken)
     {
         var equipmentToEdit = await context.Equipments.FindAsync(command.LastEquipmentGuid, cancellationToken);
-        equipmentToEdit.rename(command.Name);
-        equipmentToEdit.changeDescription(command.Description);
-        equipmentToEdit.changePrice(command.Price);
-        equipmentToEdit.changeStatus(command.Status);
+        equipmentToEdit.Rename(command.Name);
+        equipmentToEdit.ChangeDescription(command.Description);
+        equipmentToEdit.ChangePrice(command.Price);
+        equipmentToEdit.ChangeStatus(command.Status);
         await context.SaveChangesAsync(cancellationToken);
         return equipmentToEdit.Id;
     }

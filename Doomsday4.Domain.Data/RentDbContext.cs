@@ -18,6 +18,8 @@ public class RentDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new UserConfiguration());
+        modelBuilder.ApplyConfiguration(new OrderConfiguration());
+        modelBuilder.ApplyConfiguration(new EquipmentConfiguration());
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

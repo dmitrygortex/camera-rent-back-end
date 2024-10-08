@@ -32,5 +32,5 @@ public class Order : Entity<Guid>
     public DateTime EndDateTime { get; private set;}
     public decimal Сost { get; private set; } 
     public StatusEnum Status { get; private set;}
-    public List<Equipment> Equipments { get; private set; }= new List<Equipment>();
+    public virtual ICollection<Equipment> Equipments { get; private set; }= new List<Equipment>();
 }

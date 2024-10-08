@@ -34,7 +34,7 @@ public class User : Entity<Guid>
     public string Email { get; private set;}
     public string LastName { get; private set;}
     public string FirstName { get; private set;}
-    public List<Order> Orders { get; private set;} = new List<Order>();
+    public virtual ICollection<Order> Orders { get; private set;} = new List<Order>();
     public UserRole UserRole { get; private set;}
     
     public void AddOrder(Order order){this.Orders.Add(order);}
