@@ -29,7 +29,7 @@
     <ItemGroup>
         <ProjectReference Include="..\Doomsday4.Application\Doomsday4.Application.csproj"/>
         <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Domain.csproj"/>
-        <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Domain.Data.csproj"/>
+        <ProjectReference Include="..\Doomsday4.Domain.Data\Doomsday4.Domain.Data.csproj"/>
     </ItemGroup>
 
 

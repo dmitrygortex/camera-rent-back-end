@@ -27,7 +27,6 @@
     <ItemGroup>
       <ProjectReference Include="..\Doomsday4.Common\Doomsday4.Common.csproj" />
       <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Domain.csproj" />
-      <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Api.csproj" />
     </ItemGroup>
 
     <ItemGroup>
