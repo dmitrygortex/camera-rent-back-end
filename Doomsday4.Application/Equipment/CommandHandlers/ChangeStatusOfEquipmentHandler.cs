@@ -1,8 +1,9 @@
-using Doomsday4.Domain;
+using Doomsday4.Application.Equipment.Command;
 using Doomsday4.Domain.Data;
+using Doomsday4.Domain.Models;
 using MediatR;
 
-namespace Doomsday4.Application.Equipment;
+namespace Doomsday4.Application.Equipment.CommandHandlers;
 
 public class ChangeStatusOfEquipmentHandler(RentDbContext context) : IRequestHandler<ChangeStatusOfEquipment, Guid>
 {
@@ -16,6 +17,6 @@ public class ChangeStatusOfEquipmentHandler(RentDbContext context) : IRequestHan
             return equipment.Id;
         }
         // можно ли так и тут обрабатывать ошибки или же это не верно и не тут делается
-        throw new ArgumentException($"Equipment {Guid.Empty} does not exist");
+        throw new ApplicationException($"Equipment {Guid.Empty} does not exist");
     }
 }

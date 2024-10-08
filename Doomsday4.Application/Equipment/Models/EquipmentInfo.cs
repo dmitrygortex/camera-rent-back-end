@@ -1,4 +1,5 @@
 using Doomsday4.Domain;
+using Doomsday4.Domain.Models;
 
 namespace Doomsday4.Application.Equipment.Models;
 

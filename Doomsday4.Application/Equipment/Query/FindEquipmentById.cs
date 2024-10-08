@@ -1,7 +1,7 @@
 using Doomsday4.Application.Equipment.Models;
 using MediatR;
 
-namespace Doomsday4.Application.Equipment;
+namespace Doomsday4.Application.Equipment.Query;
 
 public class FindEquipmentById: IRequest<EquipmentInfo>
 {

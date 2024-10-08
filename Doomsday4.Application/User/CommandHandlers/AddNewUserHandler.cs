@@ -9,7 +9,7 @@ public class AddNewUserHandler(RentDbContext context) : IRequestHandler<AddNewUs
 {
     public async Task<Guid> Handle(AddNewUser command, CancellationToken cancellationToken)
     {
-        var newUser = await context.Users.AddAsync(new Domain.User(command.PhoneNumber, command.Password, command.Email,
+        var newUser = await context.Users.AddAsync(new Domain.Models.User(command.PhoneNumber, command.Password, command.Email,
             command.LastName, command.FirstName, command.UserRole));
         await context.SaveChangesAsync();
         

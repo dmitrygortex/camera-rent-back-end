@@ -1,4 +1,4 @@
-namespace Doomsday4.Domain;
+namespace Doomsday4.Domain.Models;
 
 public enum StatusEnum
 {

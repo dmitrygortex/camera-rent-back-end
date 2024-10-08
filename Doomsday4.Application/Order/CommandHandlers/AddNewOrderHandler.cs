@@ -9,7 +9,7 @@ public class AddNewOrderHandler(RentDbContext context) : IRequestHandler<AddNewO
 {
     public async Task<Guid> Handle(AddNewOrder command, CancellationToken cancellationToken)
     {
-        var newOrder = await context.Orders.AddAsync(new Domain.Order(command.UserId, command.StartDateTime, command.EndDateTime, command.Сost, command.Status), cancellationToken);
+        var newOrder = await context.Orders.AddAsync(new Domain.Models.Order(command.UserId, command.StartDateTime, command.EndDateTime, command.Сost, command.Status), cancellationToken);
         await context.SaveChangesAsync(cancellationToken);
         return newOrder.Entity.Id;
     }

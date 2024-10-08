@@ -1,8 +1,8 @@
-using Doomsday4.Application.User.Command;
+using Doomsday4.Application.Equipment.Command;
 using Doomsday4.Domain.Data;
 using MediatR;
 
-namespace Doomsday4.Application.Equipment;
+namespace Doomsday4.Application.Equipment.CommandHandlers;
 
 public class UpdateEquipmentHandler(RentDbContext context) : IRequestHandler<UpdateEquipment, Guid>
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 
-namespace doomsday4.Swagger;
+namespace Doomsday4.Api.Swagger;
 
 public static class SetupSwaggerConfiguration
 {

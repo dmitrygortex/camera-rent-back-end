@@ -1,6 +1,7 @@
 ﻿using Doomsday4.Application.User.Command;
 using Doomsday4.Application.User.Queries;
 using Doomsday4.Domain;
+using Doomsday4.Domain.Models;
 using MediatR;
 
 namespace Doomsday4.Api.Endpoints;

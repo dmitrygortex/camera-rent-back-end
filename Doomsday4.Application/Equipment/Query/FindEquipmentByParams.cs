@@ -1,4 +1,4 @@
-namespace Doomsday4.Application.Equipment;
+namespace Doomsday4.Application.Equipment.Query;
 
 public class FindEquipmentByParams
 {

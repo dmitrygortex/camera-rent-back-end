@@ -2,6 +2,7 @@ using Doomsday4.Application.Order.Command;
 using Doomsday4.Application.Order.Queries;
 using Doomsday4.Application.User.Command;
 using Doomsday4.Domain;
+using Doomsday4.Domain.Models;
 using MediatR;
 
 namespace Doomsday4.Api.Endpoints;

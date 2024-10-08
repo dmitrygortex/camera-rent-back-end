@@ -1,6 +1,6 @@
 ﻿using Doomsday4.Common.Domain;
 
-namespace Doomsday4.Domain;
+namespace Doomsday4.Domain.Models;
 
 public class User : Entity<Guid>
 {

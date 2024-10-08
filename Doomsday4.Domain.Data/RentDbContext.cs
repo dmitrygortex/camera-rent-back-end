@@ -1,5 +1,6 @@
 ﻿using Doomsday4.Common.Domain;
 using Doomsday4.Domain.Data.Configurations;
+using Doomsday4.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Doomsday4.Domain.Data;

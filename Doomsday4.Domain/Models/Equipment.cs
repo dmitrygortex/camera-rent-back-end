@@ -1,6 +1,6 @@
 using Doomsday4.Common.Domain;
 
-namespace Doomsday4.Domain;
+namespace Doomsday4.Domain.Models;
 
 public class Equipment : Entity<Guid>
 {
@@ -18,7 +18,7 @@ public class Equipment : Entity<Guid>
         Status = status;
     }
     
-    // Нормально ли что не приватные сетеры
+    // TODO: приватные сетеры!
     public string Name { get; set; }
     public string Description { get; set; }
     public double Price { get; set; }

@@ -1,4 +1,5 @@
 using Doomsday4.Domain;
+using Doomsday4.Domain.Models;
 
 namespace Doomsday4.Application.User.UserDto;
 
@@ -21,6 +22,6 @@ public class UserDto
     public string Email { get; private set;}
     public string LastName { get; private set;}
     public string FirstName { get; private set;}
-    public List<Domain.Order> Orders { get; private set;} = new List<Domain.Order>();
+    public List<Domain.Models.Order> Orders { get; private set;} = new List<Domain.Models.Order>();
     public UserRole UserRole { get; private set;}
 }

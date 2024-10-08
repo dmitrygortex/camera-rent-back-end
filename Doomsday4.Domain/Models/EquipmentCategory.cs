@@ -1,11 +1,21 @@
-namespace Doomsday4.Domain;
+using Doomsday4.Common.Domain;
 
-public class EquipmentCategory
+namespace Doomsday4.Domain.Models;
+
+public class EquipmentCategory : ValueObject
 {
-    private Guid CategoryId { get; set; }
-    private Guid? ParentCategoryId { get; set; }
-    private string Name { get; set; }
-    public Dictionary<string, object> Parameters { get; set; }
+    public EquipmentCategory(Guid categoryId, Guid? parentCategoryId, string name, Dictionary<string, object> parameters)
+    {
+        CategoryId = categoryId;
+        ParentCategoryId = parentCategoryId;
+        Name = name;
+        Parameters = parameters;
+    }
+
+    public Guid CategoryId { get; set; }
+    public Guid? ParentCategoryId { get; set; }
+    public string Name { get; set; }
+    public Dictionary<string, object> Parameters = new Dictionary<string, object>();
     
     // Cameras
     // Optics
@@ -14,4 +24,11 @@ public class EquipmentCategory
     // ReadySetUps
     // ShootingAccessories
     // ExternalDevice
+    protected override IEnumerable<object> GetEqualityComponents()
+    {
+        yield return CategoryId;
+        yield return ParentCategoryId;
+        yield return Name;
+        yield return Parameters;
+    }
 }
