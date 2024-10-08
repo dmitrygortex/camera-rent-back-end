@@ -1,4 +1,5 @@
 ﻿using Doomsday4.Application.User.Command;
+using Doomsday4.Application.User.Queries;
 using Doomsday4.Domain;
 using MediatR;
 
@@ -14,6 +15,12 @@ public static class UserEndpoints
         {
             var result = await mediator.Send(new AddNewUser(user.PhoneNumber, user.Password, user.Email,
                 user.LastName, user.FirstName, user.UserRole));
+            return Results.Ok(result);
+        });
+        endpoints.MapGet("/find-by-id/{id}", async (IMediator mediator, FindUserById user) =>
+        {
+            var result = await mediator.Send(new FindUserById(user.Id));
+                
             return Results.Ok(result);
         });
         return app;

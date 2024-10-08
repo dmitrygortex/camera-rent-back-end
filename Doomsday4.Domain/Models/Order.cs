@@ -8,29 +8,29 @@ public class Order : Entity<Guid>
     {
     }
 
-    // public Order(string userId, DateTime startDateTime, DateTime endDateTime, double cost, StatusEnum status)
-    // {
-    //     Id = Guid.NewGuid();
-    //     // UserId = userId;
-    //     StartDateTime = startDateTime;
-    //     EndDateTime = endDateTime;
-    //     Сost = cost;
-    //     Status = status;
-    // }
-    public Order(DateTime startDateTime, DateTime endDateTime, double сost, StatusEnum status)
+    public Order(Guid userId, DateTime startDateTime, DateTime endDateTime, decimal cost, StatusEnum status)
     {
         Id = Guid.NewGuid();
+        UserId = userId;
         StartDateTime = startDateTime;
         EndDateTime = endDateTime;
-        Сost = сost;
+        Сost = cost;
         Status = status;
     }
+    // public Order(DateTime startDateTime, DateTime endDateTime, double сost, StatusEnum status)
+    // {
+    //     Id = Guid.NewGuid();
+    //     StartDateTime = startDateTime;
+    //     EndDateTime = endDateTime;
+    //     Сost = сost;
+    //     Status = status;
+    // }
 
-    // public User User { get; private set;} //зачем прописывать ещё это поле TODO спросить про связи
-    // public string UserId { get; private set;}
-    public DateTimeOffset StartDateTime { get; private set;}
-    public DateTimeOffset EndDateTime { get; private set;}
-    public double Сost { get; private set; }
+    public User User { get; private set;}
+    public Guid UserId { get; private set;}
+    public DateTime StartDateTime { get; private set;}
+    public DateTime EndDateTime { get; private set;}
+    public decimal Сost { get; private set; } 
     public StatusEnum Status { get; private set;}
-    // public List<Equipment> Equipments { get; private set; }= new List<Equipment>();
+    public List<Equipment> Equipments { get; private set; }= new List<Equipment>();
 }

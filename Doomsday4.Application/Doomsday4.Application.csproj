@@ -30,9 +30,4 @@
       <ProjectReference Include="..\Doomsday4.Domain\Doomsday4.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Order\CommandHandlers\" />
-      <Folder Include="Order\Command\" />
-    </ItemGroup>
-
 </Project>
