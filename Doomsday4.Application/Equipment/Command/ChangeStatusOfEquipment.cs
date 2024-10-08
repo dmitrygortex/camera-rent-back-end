@@ -11,6 +11,7 @@ public class ChangeStatusOfEquipment : IRequest<Guid>
         Equipment = equipment;
     }
 
-    public EquipmentStatus EquipmentStatus { get; set; }
+    public EquipmentStatus EquipmentStatus { get; }
+    
     public Domain.Models.Equipment Equipment { get; }
 }

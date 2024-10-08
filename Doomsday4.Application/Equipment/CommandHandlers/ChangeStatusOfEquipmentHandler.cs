@@ -12,11 +12,10 @@ public class ChangeStatusOfEquipmentHandler(RentDbContext context) : IRequestHan
         var equipment = await context.Equipments.FindAsync(new object[] { command.Equipment.Id });
         if (equipment != null)
         {
-            equipment.Status = EquipmentStatus.Available;
-            await context.SaveChangesAsync();
+            equipment.changeStatus(command.EquipmentStatus);
+            await context.SaveChangesAsync(cancellationToken);
             return equipment.Id;
         }
-        // можно ли так и тут обрабатывать ошибки или же это не верно и не тут делается
         throw new ApplicationException($"Equipment {Guid.Empty} does not exist");
     }
 }
