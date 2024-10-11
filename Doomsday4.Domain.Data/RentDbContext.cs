@@ -10,10 +10,6 @@ public class RentDbContext : DbContext
     public RentDbContext(DbContextOptions<RentDbContext> options) : base(options)
     {
     }
-
-    public RentDbContext()
-    {
-    }
     
     public DbSet<User> Users { get; set; }
     public DbSet<Order> Orders { get; set; }
@@ -33,8 +29,8 @@ public class RentDbContext : DbContext
         if (!optionsBuilder.IsConfigured) 
             throw new InvalidOperationException("Context was not configured");
         base.OnConfiguring(optionsBuilder);
+        
     }
-    
    
 }
 
@@ -42,12 +38,13 @@ public class RentDbContext : DbContext
 // {
 //     public DbSet<User> Users { get; set; }
 //     public DbSet<Order> Orders { get; set; }
+//     public DbSet<Equipment> Equipment { get; set; }
 //     public RentDbContext()
 //     {
 //         Database.EnsureCreated();
 //     }
 //     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 //     {
-//         optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=camerarentdb;Username=postgres;Password=lansepup1");
+//         optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=camerarentdb;Username=postgres;Password=0");
 //     }
 // }

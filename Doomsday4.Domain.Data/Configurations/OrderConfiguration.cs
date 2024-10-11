@@ -1,6 +1,7 @@
 using Doomsday4.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Newtonsoft.Json;
 
 namespace Doomsday4.Domain.Data.Configurations;
 
@@ -18,7 +19,8 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder
             .HasMany(o => o.Equipments)
             .WithOne()
-            .IsRequired();
+            .IsRequired(false);
+
 
         //.HasConversion(v )
         //enum будет сохраняться в стринге

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Doomsday4.Common.Domain;
 
 namespace Doomsday4.Domain.Models;
@@ -7,7 +8,7 @@ public class Equipment : Entity<Guid>
     private Equipment()
     {
     }
-
+    
     public Equipment(string name, string description, double price, EquipmentCategory category, EquipmentStatus status)
     {
         Id = Guid.NewGuid();

@@ -4,6 +4,8 @@ namespace Doomsday4.Domain.Models;
 
 public class EquipmentCategory : ValueObject
 {
+    
+    public EquipmentCategory() { }
     public EquipmentCategory(Guid categoryId, Guid? parentCategoryId, string name, Dictionary<string, object> parameters)
     {
         CategoryId = categoryId;
