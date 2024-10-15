@@ -1,17 +1,18 @@
 using Doomsday4.Domain.Models;
 using MediatR;
+using Newtonsoft.Json;
 
 namespace Doomsday4.Application.Equipment.Command;
 
 public class ChangeStatusOfEquipment : IRequest<Guid>
 {
-    public ChangeStatusOfEquipment(EquipmentStatus status, Domain.Models.Equipment equipment)
+    public ChangeStatusOfEquipment(EquipmentStatus status, Guid equipmentGuid)
     {
         EquipmentStatus = status;
-        Equipment = equipment;
+        EquipmentGuid = equipmentGuid;
     }
 
     public EquipmentStatus EquipmentStatus { get; }
     
-    public Domain.Models.Equipment Equipment { get; }
+    public Guid EquipmentGuid { get; }
 }

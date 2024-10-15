@@ -36,7 +36,14 @@ public static class EquipmentEndpoints
             
             return Results.Ok(result);
         });
-        
+
+        // endpoints.MapPost("/change-status", async (IMediator mediator, [FromBody]ChangeStatusOfEquipment equipment) =>
+        //     {
+        //         var result = await mediator.Send(new ChangeStatusOfEquipment(equipment.EquipmentStatus, equipment.EquipmentGuid));
+        //
+        //         return Results.Ok(result);
+        //     });
+
         return app;
     }
 }

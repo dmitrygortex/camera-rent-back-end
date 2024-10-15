@@ -12,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 
+
+
 // var dataSourceBuilder = new NpgsqlDataSourceBuilder(
 //     builder.Configuration.GetConnectionString("DBConnection")
 // );

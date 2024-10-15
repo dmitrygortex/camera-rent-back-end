@@ -18,8 +18,6 @@ public class Equipment : Entity<Guid>
         Category = category;
         Status = status;
     }
-    
-    // Нормально ли что не приватные сетеры
     public string Name { get; private set; }
 
     public void Rename(string newName)
