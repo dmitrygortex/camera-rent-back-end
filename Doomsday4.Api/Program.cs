@@ -3,6 +3,9 @@ using Doomsday4.Api.Middlewares;
 using Doomsday4.Api.Swagger;
 using Doomsday4.Application;
 using Doomsday4.Domain.Data;
+using Doomsday4.Domain.Models;
+using Doomsday4.Domain.Models.Validation;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Npgsql;
@@ -12,7 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 
-
+// не уверен что IoC норм работает и как тужа правильно передать непонял, поэтому временно добавил тут
+builder.Services.AddScoped<IValidator<(string OldDescription, string NewDescription)>, ChangeDescriptionValidator>();
+builder.Services.AddScoped<IValidator<(double OldPrice, double NewPrice)>, ChangePriceValidator>();
+builder.Services.AddScoped<IValidator<(EquipmentStatus OldStatus, EquipmentStatus NewStatus)>, ChangeStatusEquipmentValidator>();
+builder.Services.AddScoped<IValidator<Equipment>, EquipmentValidator>();
+builder.Services.AddScoped<IValidator<(string OldName, string NewName)>, RenameEquipmentValidator>();
 
 // var dataSourceBuilder = new NpgsqlDataSourceBuilder(
 //     builder.Configuration.GetConnectionString("DBConnection")
