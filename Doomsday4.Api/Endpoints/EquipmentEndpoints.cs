@@ -17,12 +17,7 @@ public static class EquipmentEndpoints
         var endpoints = app.MapGroup("/equipment");
 
         endpoints.MapPost("/add", async (IMediator mediator, [FromServices]IValidator<Equipment> equipmentValidator, [FromBody]Equipment equipment) =>
-        {
-            if (!(await equipmentValidator.ValidateAsync(equipment)).IsValid)
-            {
-                return Results.Problem("Invalid equipment");
-            }
-            
+        { 
             var result = await mediator.Send(new AddNewEquipment(equipment.Name, equipment.Description, 
                 equipment.Price, equipment.Category, equipment.Status));
             return Results.Ok(result);
