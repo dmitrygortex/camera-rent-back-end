@@ -8,14 +8,14 @@ public class Order : Entity<Guid>
     {
     }
 
-    public Order(Guid userId, DateTime startDateTime, DateTime endDateTime, decimal cost, StatusEnum status)
+    public Order(Guid userId, DateTime startDateTime, DateTime endDateTime, decimal cost, OrderStatus orderStatus)
     {
         Id = Guid.NewGuid();
         UserId = userId;
         StartDateTime = startDateTime;
         EndDateTime = endDateTime;
         Сost = cost;
-        Status = status;
+        OrderStatus = orderStatus;
     }
     // public Order(DateTime startDateTime, DateTime endDateTime, double сost, StatusEnum status)
     // {
@@ -31,6 +31,6 @@ public class Order : Entity<Guid>
     public DateTime StartDateTime { get; private set;}
     public DateTime EndDateTime { get; private set;}
     public decimal Сost { get; private set; } 
-    public StatusEnum Status { get; private set;}
-    public virtual ICollection<Equipment> Equipments { get; private set; }= new List<Equipment>();
+    public OrderStatus OrderStatus { get; private set;}
+    public virtual ICollection<EquipmentUnit> EquipmentUnits { get; private set; }= new List<EquipmentUnit>();
 }

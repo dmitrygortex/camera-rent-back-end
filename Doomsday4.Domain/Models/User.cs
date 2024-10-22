@@ -36,6 +36,9 @@ public class User : Entity<Guid>
     public string FirstName { get; private set;}
     public virtual ICollection<Order> Orders { get; private set;} = new List<Order>();
     public UserRole UserRole { get; private set;}
-    
-    public void AddOrder(Order order){this.Orders.Add(order);}
+
+    public void AddOrder(Order order)
+    {
+        this.Orders.Add(order);
+    }
 }

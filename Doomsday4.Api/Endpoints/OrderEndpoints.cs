@@ -17,7 +17,7 @@ public static class OrderEndpoints
             endpoints.MapPost("/add", async (IMediator mediator,[FromBody] Order order) =>
             {
                 var result = await mediator.Send(new AddNewOrder(order.UserId, order.StartDateTime, 
-                    order.EndDateTime, order.Сost, order.Status));
+                    order.EndDateTime, order.Сost, order.OrderStatus));
                 return Results.Ok(result);
             });
             

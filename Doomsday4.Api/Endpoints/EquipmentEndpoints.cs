@@ -16,7 +16,7 @@ public static class EquipmentEndpoints
     {
         var endpoints = app.MapGroup("/equipment");
 
-        endpoints.MapPost("/add", async (IMediator mediator, [FromServices]IValidator<Equipment> equipmentValidator, [FromBody]Equipment equipment) =>
+        endpoints.MapPost("/add", async (IMediator mediator, [FromServices]IValidator<EquipmentType> equipmentValidator, [FromBody]EquipmentType equipment) =>
         { 
             var result = await mediator.Send(new AddNewEquipment(equipment.Name, equipment.Description, 
                 equipment.Price, equipment.Category, equipment.Status));

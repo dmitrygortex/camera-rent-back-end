@@ -8,7 +8,7 @@ public class AddNewEquipmentHandler(RentDbContext context) : IRequestHandler<Add
 {
     public async Task<Guid> Handle(AddNewEquipment command, CancellationToken cancellationToken)
     {
-        var newEquipment = await context.Equipments.AddAsync(new Domain.Models.Equipment(command.Name, command.Description, command.Price, command.Category, command.Status), cancellationToken);
+        var newEquipment = await context.Equipments.AddAsync(new Domain.Models.EquipmentType(command.Name, command.Description, command.Price, command.Category, command.Status), cancellationToken);
 
         
         await context.SaveChangesAsync(cancellationToken);

@@ -7,17 +7,17 @@ namespace Doomsday4.Application.Order.Command;
 
 public class AddNewOrder : IRequest<Guid>
 {
-    public AddNewOrder(Guid userId, DateTime startDateTime, DateTime endDateTime, decimal сost, StatusEnum status)
+    public AddNewOrder(Guid userId, DateTime startDateTime, DateTime endDateTime, decimal сost, OrderStatus orderStatus)
     {
         UserId = userId;
         StartDateTime = startDateTime;
         EndDateTime = endDateTime;
         Сost = сost;
-        Status = status;
+        OrderStatus = orderStatus;
     }
     public Guid UserId { get; private set;}
     public DateTime StartDateTime { get; private set;}
     public DateTime EndDateTime { get; private set;}
     public decimal Сost { get; private set; } 
-    public StatusEnum Status { get; private set;}
+    public OrderStatus OrderStatus { get; private set;}
 }

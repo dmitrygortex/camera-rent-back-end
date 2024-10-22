@@ -15,9 +15,9 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
             .WithMany(o => o.Orders)
             .HasForeignKey(o => o.UserId)
             .IsRequired();
-        builder.Property(o => o.Status).HasConversion<string>();
+        builder.Property(o => o.OrderStatus).HasConversion<string>();
         builder
-            .HasMany(o => o.Equipments)
+            .HasMany(o => o.EquipmentUnits)
             .WithOne()
             .IsRequired(false);
 

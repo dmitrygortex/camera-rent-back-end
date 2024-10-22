@@ -13,13 +13,15 @@ public class RentDbContext : DbContext
     
     public DbSet<User> Users { get; set; }
     public DbSet<Order> Orders { get; set; }
-    public DbSet<Equipment> Equipments { get; set; }
+    public DbSet<EquipmentType> EquipmentTypes { get; set; }
+    public DbSet<EquipmentUnit> EquipmentUnits { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new OrderConfiguration());
-        modelBuilder.ApplyConfiguration(new EquipmentConfiguration());
+        modelBuilder.ApplyConfiguration(new EquipmentTypeConfiguration());
+        modelBuilder.ApplyConfiguration(new EquipmentUnitConfiguration());
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

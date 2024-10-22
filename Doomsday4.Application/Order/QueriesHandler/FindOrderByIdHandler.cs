@@ -19,7 +19,7 @@ public class FindOrderByIdHandler(RentDbContext context) : IRequestHandler<FindO
         else
         {
             return new OrderDto.OrderDto(order.Id, order.UserId, order.StartDateTime, order.EndDateTime, order.Сost,
-                order.Status);
+                order.OrderStatus);
         }
     }
 }
